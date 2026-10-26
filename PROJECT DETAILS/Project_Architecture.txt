@@ -1,0 +1,769 @@
+StaffSync - Modern human resource management solution.
+
+
+The StaffSync - Modern human resource management solution. is a comprehensive web-based application built using the **MERN Stack (MongoDB, Express.js, React.js, and Node.js)** that streamlines and automates various HR processes within an organization. The system provides distinct roles and access levels for **HR personnel, managers, and employees**, ensuring efficient management and transparency across all operations. HR can manage employee data, handle leave approvals, track attendance, and post announcements or news. Employees can apply for leaves, maintain their personal records, mark attendance, and stay updated with company announcements. Managers can oversee leave requests and manage training and development programs for their teams. This centralized platform enhances productivity, improves communication, and promotes a seamless workflow across departments by digitizing core HR functions.
+
+
+
+
+
+
+
+
+System Requirements:
+
+To ensure smooth development, deployment, and usage of the HRM Tool Web Application, certain system prerequisites must be met. These requirements are categorized into software, setup, and hardware specifications, all of which contribute to building a robust and scalable agricultural platform.
+
+1. Software Requirements
+These are the essential tools and platforms required to develop, test, and run the application efficiently.
+
+Operating System: Windows 10/11, macOS, or Linux — Supports cross-platform development and testing.
+
+Node.js (v16 or above): Provides the runtime environment for building and managing frontend logic and Powers the server-side logic and handles API routing.  Download Node.js
+
+npm (v8 or above): A package manager required to install dependencies for React and related libraries.
+
+React.js: A JavaScript library for building dynamic and responsive user interfaces.
+
+Browser: Google Chrome / Firefox (latest version) — For rendering and testing the UI in real-time.
+
+Express.js: A lightweight web framework for building RESTful APIs.
+
+MongoDB: A NoSQL database used to store structured and unstructured data related to farms, users, and resources. Download MongoDB
+
+Postman: Tool for testing APIs during development.
+
+Visual Studio Code: Preferred code editor with built-in Git and terminal support.
+
+2. Hardware Requirements
+Describes the minimum and recommended specifications needed to support the development and usage of the application.
+
+Processor: Intel Core i5 (8th Gen or above) / AMD Ryzen 5 or better — Ensures fast compilation and multitasking during development.
+
+RAM: Minimum 8 GB (16 GB recommended) — For handling development servers, IDEs, and browser testing simultaneously.
+
+Storage: At least 1 GB free space — Required for package installations, MongoDB setup, and local project files.
+
+Display: 1366x768 or higher — Recommended for optimal coding experience and application layout visualization.
+
+
+
+
+
+Instructions:
+
+The Human Resource Management (HRM) System is a comprehensive web-based application designed to streamline and automate various HR processes within an organization. The system allows HR personnel, managers, and employees to manage employee information, attendance, leave requests, announcements, and training activities through a secure and user-friendly interface.
+
+1. Environment Setup
+Backend
+Node.js
+
+Express.js
+
+MongoDB & Mongoose
+
+JWT
+
+bcryptjs
+
+Cors
+
+Dotenv
+
+Frontend
+React.js
+
+Axios
+
+React Router
+
+Redux Toolkit
+
+Bootstrap / Material UI
+
+2. Database Collections
+Users
+
+Employees
+
+Managers
+
+Attendance
+
+Leaves
+
+Announcements
+
+Trainings
+
+Notifications
+
+3. Core Modules
+Employee
+Register/Login
+
+Manage Profile
+
+Mark Attendance
+
+Apply for Leave
+
+View Leave Status
+
+View Announcements
+
+Access Training Programs
+
+Update Personal Information
+
+Manager
+Manage Team Members
+
+Review Leave Requests
+
+Approve/Reject Leaves
+
+Manage Training Programs
+
+Monitor Employee Performance
+
+View Team Attendance
+
+HR
+Manage Employees
+
+Manage Managers
+
+Track Attendance
+
+Manage Leave Requests
+
+Post Announcements
+
+View Reports & Analytics
+
+4. Security
+JWT Authentication
+
+Password Hashing
+
+Role-Based Access Control
+
+Protected Routes
+
+Input Validation
+
+Secure Data Management
+
+5. User Interface
+Home Page
+
+Employee Profile Page
+
+Attendance Page
+
+Leave Management Page
+
+Announcements Page
+
+Employee Dashboard
+
+Manager Dashboard
+
+HR Dashboard
+
+Responsive Design
+
+6. Testing
+Authentication Testing
+
+Attendance Management Testing
+
+Leave Management Testing
+
+Employee Management Testing
+
+Dashboard Testing
+
+7. Optimization
+Database Indexing
+
+Lazy Loading
+
+Pagination
+
+API Optimization
+
+Performance Monitoring
+
+Outcome
+Build a MERN-based Human Resource Management System.
+
+Implement secure authentication and role-based access.
+
+Develop employee, attendance, and leave management workflows.
+
+Create dashboards for employees, managers, and HR personnel.
+
+Manage employee records, attendance, leaves, and training activities efficiently.
+
+Deploy a scalable and user-friendly HR management solution.
+
+
+
+
+
+
+TECHNICAL ARCHITECTURE:
+
+
+The system should have three main roles — HR, Employee, and Manager — each with specific functionalities.
+
+Frontend (React.js):
+
+Role-based dashboards (HR Dashboard, Employee Dashboard, Manager Dashboard)
+
+Features include:
+
+HR: Manage employees (Add/Edit/Delete/View), approve/reject leave, view attendance, post announcements
+
+Employee: Apply for leave, view attendance, maintain personal records, see announcements
+
+Manager: Approve leave requests, manage training & development
+
+Backend (Node.js + Express.js):
+
+Handles authentication and authorization (JWT-based)
+
+Provides REST APIs for CRUD operations (Employees, Leaves, Attendance, Announcements, Training)
+
+Implements role-based access control
+
+Connects to MongoDB database
+
+Database (MongoDB):
+
+Collections: Users, Employees, LeaveRequests, Attendance, Announcements, TrainingPrograms
+
+Stores structured JSON documents
+
+
+
+
+
+
+
+ER-DIAGRAM:
+
+Explanation of the HRM System ER Diagram
+The Entity-Relationship Diagram (ERD) represents the core data structure of the Human Resource Management System (HRM). It defines how various entities such as Employee, Manager, LeaveRequest, Attendance, and Announcement are related.
+
+Employee Entity
+
+Attributes: EmployeeID, FirstName, LastName
+
+Each employee can submit multiple leave requests and has associated attendance records.
+
+
+Manager Entity
+
+Attributes: ManagerID, FirstName, LastName
+
+A manager can approve leave requests submitted by employees and can also post announcements for the organization.
+
+
+LeaveRequest Entity
+
+Attributes: StartDate, EndDate, Status
+
+Represents a leave application submitted by an employee and approved or rejected by a manager.
+
+
+Attendance Entity
+
+Attribute: Date
+
+Keeps track of the daily attendance records of each employee.
+
+
+Announcement Entity
+
+Represents organization-wide news or updates posted by managers or HR personnel.
+
+Relationships
+Employee → LeaveRequest: An employee submits a leave request.
+
+Manager → LeaveRequest: A manager approves or rejects a leave request.
+
+Manager → Announcement: A manager posts announcements for employees.
+
+Employee → Attendance: An employee records attendance daily.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+FEATURES:
+
+Description
+Role-Based Access Control:
+ The system provides dedicated dashboards and permissions for HR, managers, and employees, ensuring secure and role-specific access to features and data.
+
+
+Employee & Leave Management:
+ HR can easily add, edit, or remove employee records, while employees can apply for leaves digitally. Managers and HR can review, approve, or reject requests with real-time updates.
+
+
+Attendance Tracking & Reporting:
+ Integrated attendance management allows employees to mark attendance, and HR can monitor daily records and generate reports for performance and payroll analysis.
+
+
+Announcements & Internal Communication:
+ HR and managers can post important updates, company news, or event notifications, ensuring effective communication across the organization.
+
+
+
+
+
+
+
+
+
+
+
+ROLES AND RESPONSIBILITIES:
+
+ Description
+Manage Employee Records Efficiently
+HR personnel are responsible for creating, viewing, updating, and deleting employee records to maintain accurate employee information and organizational data.
+
+Handle Leave Management Processes
+Employees can apply for leave requests, while managers and HR personnel are responsible for reviewing, approving, or rejecting leave applications to ensure smooth workforce planning.
+
+Track and Monitor Attendance
+Employees are responsible for marking their attendance regularly. HR personnel can monitor attendance records, generate reports, and maintain accurate attendance data for payroll and performance evaluation.
+
+Manage Training and Development Programs
+Managers are responsible for creating, assigning, and monitoring training programs to support employee skill development and professional growth.
+
+Post and Review Announcements
+HR personnel and managers can create and publish company announcements, notifications, and updates to ensure effective communication across the organization.
+
+Maintain Personal Employee Information
+Employees are responsible for updating and managing their personal profiles and records to ensure information remains accurate and up to date.
+
+Ensure Secure Access and Authentication
+All users are responsible for maintaining the confidentiality of their login credentials and accessing only the features permitted according to their assigned roles.
+
+Review Organizational Updates
+Employees are responsible for regularly checking announcements, leave status updates, attendance records, and training notifications to stay informed about company activities.
+
+Generate and Monitor Reports
+HR personnel can review attendance reports, leave records, and employee information to support administrative decision-making and workforce management.
+
+Support Role-Based Operations
+The system provides dedicated dashboards for HR, Managers, and Employees, and users are responsible for utilizing the features available within their designated roles.
+
+
+
+
+
+USER FLOW:
+
+The User Flow Diagram illustrates how different types of users (HR, Manager, and Employee) interact with the HRM System from login to completing their specific tasks. It visually represents the flow of actions within the application to ensure smooth and logical navigation for every role.
+
+Start & Login
+
+The process begins when a user (HR, Manager, or Employee) opens the application.
+
+Each user must log in using their credentials to access role-specific features.
+
+
+Role Selection
+
+Based on login credentials, the system identifies the user role and redirects them to the appropriate dashboard:
+
+HR Dashboard
+
+Manager Dashboard
+
+Employee Dashboard
+
+
+HR Flow
+
+The HR user accesses their dashboard to manage employee data, view attendance, approve/reject leave requests, and post announcements.
+
+This helps maintain centralized control over organizational activities.
+
+
+Manager Flow
+
+The Manager can view leave applications submitted by employees, approve or reject them, and manage training and development schedules for their team.
+
+
+Employee Flow
+
+The Employee can apply for leave, view attendance records, and stay updated with announcements or company news.
+
+
+End
+
+After completing their respective tasks, users can log out, marking the end of their session.
+
+
+
+
+MVC PATTERN:
+
+The HRM Tool backend application follows the Model-View-Controller (MVC) architectural pattern, a software design approach that separates an application into three interconnected layers. This separation allows for modularity, easier maintenance, and scalability.
+
+Model Layer (Data Layer)
+
+The Model layer is responsible for handling all data-related logic. This includes the definition of data schemas and the operations performed on the database using those schemas. The models are implemented using Mongoose, which provides a schema-based solution to model application data for MongoDB.
+
+
+Controller Layer
+
+The Controller layer acts as an intermediary between the view (routes) and the model. It receives incoming requests, processes the input (which may include validation or transformation), calls the appropriate methods from the model, and then returns a response to the client.
+
+View Layer (Routing Layer)
+
+In the context of a backend REST API, the View is implemented as the routing layer, where various endpoints are defined. These endpoints determine how the backend responds to different HTTP requests (GET, POST, PUT, DELETE) and are responsible for invoking the appropriate controller functions.
+
+Advantages of Using MVC in This Project
+
+Separation of Concerns: Each layer has a clearly defined responsibility, improving readability and maintainability.
+
+Scalability: New features can be added easily by creating new routes, controllers, and models.
+
+Reusability: Logic in controllers and models can be reused across multiple parts of the application.
+
+Testing: Each layer can be tested independently, especially the controllers and models.
+
+Collaboration-Friendly: Multiple developers can work simultaneously on different layers without conflict.
+
+
+
+
+
+
+CREATING PROJECT FOLDER:
+
+Description
+Create a new folder with your .
+
+Inside that folder create two new folders.
+
+Name one as Client.
+
+Name another one as Server.
+
+Now open that folder in VS Code.
+
+
+
+
+
+CLIENT SETUP:
+Description
+Open the Client folder in the terminal of VScode.
+
+npm create vite@latest . -- --template react
+
+Select React framework from the given options.
+
+Select a framework:
+
+│  React
+
+Select JavaScript variant from the given options.
+
+Select a variant:
+
+│  JavaScript
+
+Now lets navigate to the client folder by giving the following command.
+
+cd client
+
+To install all the packages run the following command.
+
+npm install
+
+To start the React server type the following command.
+
+npm run dev
+
+
+
+
+
+SERVER SETUP:
+Description
+Open Server folder in terminal of VScode.
+
+npm init -y
+
+Create files:
+
+server.js
+
+Create folders:
+
+models
+
+Controllers
+
+Routes
+
+
+
+
+
+DEVELOPEMENT AND EXPLANATION:
+
+server.js
+Main entry point of the application — initializes Express server, connects to MongoDB, and loads routes and middleware.
+
+config/
+db.js: Handles MongoDB database connection setup using Mongoose.
+
+controllers/
+Contains logic for handling requests and responses for each module.
+
+announcementController.js: Manages CRUD operations for announcements.
+
+attendanceController.js: Handles attendance marking, fetching, and reporting.
+
+authController.js: Manages user authentication, login, and registration.
+
+employeeController.js: Controls employee data operations (add, edit, delete, view).
+
+leaveController.js: Handles leave application, approval, and status updates.
+
+trainingController.js: Manages training program creation and assignment.
+
+
+ middleware/
+authMiddleware.js: Validates JWT tokens and ensures authorized access to protected routes.
+
+ models/
+
+Defines MongoDB schemas for each collection.
+
+Announcement.js: Schema for company announcements.
+
+Attendance.js: Schema for employee attendance records.
+
+Employee.js: Schema for employee details.
+
+Leave.js: Schema for leave requests.
+
+Training.js: Schema for training and development data.
+
+User.js: Schema for authentication and role management.
+
+ routes/
+Defines API endpoints and maps them to corresponding controllers.
+
+announcementRoutes.js: Routes for announcements API.
+
+attendanceRoutes.js: Routes for attendance tracking.
+
+authRoutes.js: Routes for login, register, and authentication.
+
+employeeRoutes.js: Routes for employee management.
+
+leaveRoutes.js: Routes for leave requests and approvals.
+
+trainingRoutes.js: Routes for training management.
+
+
+
+
+CONFIGURE MONGODB:
+Description
+Install Mongoose.
+
+In your Node.js project directory, run:
+
+           npm install mongoose
+
+Create database connection. 
+
+Create Schemas & Models.
+
+
+
+
+CREATE DATABASE CONNECTION:
+Now, make sure the database is connected before performing any of the actions    through the backend. The connection code looks similar to the one provided below 
+
+
+
+
+
+
+
+
+
+
+CREATE SCHEMA AND MODELS:
+Description
+Firstly, configure the Schemas for MongoDB database, to store the data in such a pattern. Use the data from the ER diagrams to create the schemas.The Schemas for this application look alike to the one provided below.
+
+
+
+
+
+
+
+
+
+DEVELOPMENT AND EXPLANATION:
+auth/
+Login.jsx: User login form handling authentication.
+
+Register.jsx: User registration form for new employees or HRs.
+
+employee/
+Announcements.jsx: Displays company announcements and news for employees.
+
+Attendance.jsx: Shows and manages employee attendance records.
+
+LeaveApply.jsx: Form for employees to apply for leave.
+
+LeaveList.jsx: Displays leave history and status of employee requests.
+
+hr/
+AnnouncementsManager.jsx: Enables HR to post and manage announcements.
+
+AttendanceSummary.jsx: Displays an overview of all employees’ attendance.
+
+EmployeeCRUD.jsx: Allows HR to create, view, update, or delete employee data.
+
+LeaveApplications.jsx: Lets HR view, approve, or reject leave requests.
+
+
+manager/
+LeaveApplications.jsx: Displays leave applications for manager approval.
+
+TrainingManagement.jsx: Enables managers to plan and assign training programs.
+
+pages/
+EmployeeDashboard.jsx: Dashboard interface for employees.
+
+HrDashboard.jsx: Dashboard for HR to manage operations.
+
+ManagerDashboard.jsx: Dashboard for managers to view reports and training.
+
+ App.css
+Contains global CSS styling for the application.
+
+ App.jsx
+Main React component that defines routes and renders the overall layout.
+
+ index.js
+Entry point of the React app that renders <App /> into the DOM.
+
+
+
+
+
+
+
+
+
+
+
+STEPS FOR PROJECT EXECUTION:
+Description
+ Step 1: Download and Open the Project
+
+First, clone or download the project folder (HRM Tool) from the repository or your local source.
+
+Once downloaded, open the project folder in VS Code or any code editor of your choice.
+
+You will see two main subfolders:
+
+client → contains the frontend (React) code
+server → contains the backend (Node.js + Express) code
+
+
+Step 2: Set Up the Frontend (React App):
+
+  a) Open a terminal and navigate into the client folder:
+
+        cd client
+
+  b)  Install all the required frontend packages:
+
+        npm install
+
+c) Once installation is done, start the React development server:
+
+      npm run dev
+
+d) The app should now be running on:
+
+     http://localhost:5173
+
+Step 3: Set Up the Backend (Express Server)
+
+  a)  Open a new terminal tab/window or split the terminal.
+
+  b) Navigate into the server folder:
+
+        cd ../server
+
+  c) Install all backend dependencies (like Express, Mongoose, etc.):
+
+      npm install
+
+
+
+
+Step 4: Configure Environment Variables
+
+Inside the server folder, create a new file named .env (no file extension).
+
+In that .env file, add your MongoDB connection string:
+
+           MONGO_URI=mongodb://localhost:27017/hrm
+
+     
+
+Step 5: Start the Backend Server:
+
+Inside the same server folder, run the backend server using:
+
+             nodemon index.js
+
+The server should start on:
+
+http://localhost:8000
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+OUTPUT SCREENSHORTS:
